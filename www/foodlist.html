@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<body bgcolor="pink">
+<center> <br><br><br>
+
+<h1><b> <font color="blue"> Food List </b></h1></font>
+
+<form><textarea id="foods" rows="20" cols="40" placeholder="Enter Your Foods" ></textarea></form>
+
+<br>
+<p><button onclick="save()" type="button"> SAVE ME! </button></p>
+<p><button onclick="remember()" type="button"> REMEMBER ME! </button></p>
+
+<br>
+<script>
+	function save(){
+		window.localStorage['foods'] = document.getElementById('foods').value;
+	}
+	function remember(){
+		document.getElementById('foods').value = window.localStorage['foods'];
+	}
+</script>
+
+
+</center>
+
+</body>
+</html>
